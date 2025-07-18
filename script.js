@@ -1,4 +1,6 @@
-const apiKey = "ZzYLebLizq5TGRUDb9HyZrYcVLGP2QA2bjO3TvARJeSfIX4Orf"; // 🔐 Replace this with your actual API key
+//deploy it once and check the PLANTS
+
+const apiKey = "3EmO8E0NSnTf9wN5g7bdOX4oLoBi43vILRvZh43ZEbk2P4Qs63"; // 🔐 Replace this with your actual API key
 let UploadedImage;
 let base64Image = "";
 let query;
