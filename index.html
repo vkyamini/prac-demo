@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plant Info Search</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f2fbe0; }
+    input, button { padding: 10px; font-size: 16px; margin: 10px 0; }
+    #result img { max-width: 200px; margin-top: 10px; }
+    .field { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🌱 Plant Info Search</h1>
+   <div>
+    <div id="Input_Search">
+      <input type="text" id="plantName" placeholder="Enter plant name..." />
+      <button id="searchBtn">Search</button>
+      <input type="file" id="imageInput" accept="image/*"> 
+      <!-- This creates a file picker input on your page — a button that lets the user upload an image from their device. -->
+      <!-- <button id="upload">Upload</button> -->
+      <!-- <div id="camera_function" hidden>
+      <video id="video" autoplay playsinline></video>
+            <button id="captureBtn">📷 Capture</button>
+            <button id="flipBtn">🔄 Flip Camera</button>
+            <canvas id="canvas" style="display: none;"></canvas>
+      <img id="photo" alt="Captured Photo"/>
+      </div> -->
+      
+   </div>
+   <div id="result"></div>
+   <div id="next"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
