@@ -1,0 +1,51 @@
+1. An app to capture plants and retrieve details about them
+2. Using 1 API (plant.id API)
+  🔁 Combining with Plant.id
+     -Name, image, description (Plant.id)
+     -Care summary (perrenial + your logic)
+3. include a weather API to know how the temp may effect the plant
+
+
+
+CORE FEATURES
+
+1. capture plant/flower/leaves
+2. get the plant details
+   a. Name
+   b. similar images
+   c. Discription about the plant
+   d. care tips
+   e. disease info
+      Whether the plant is healthy
+      Name of likely diseases (if unhealthy)
+      Confidence score
+      Suggested treatments
+      Similar disease images
+3. save the plants data(if possible)
+   | Input from user         | How to use it                       |
+| ----------------------- | ----------------------------------- |
+| 🌎 Zip code or country  | Adjust watering frequency by season |
+| 🌤️ Light availability  | Recommend plant placement           |
+| 🌱 Experience level     | Beginner? Add extra care reminders  |
+| 📆 Reminders (optional) | Schedule notifications or tasks     |
+
+
+DATA FLOW - graph TD
+  A[User Uploads / Captures Photo]
+  B[Frontend JS converts to Base64]
+  C[API Call to Plant.id]
+  D[Receives Suggestions & Health Info]
+  E[Generate Personalized Tips]
+  F[Render Tips + Image + Card UI]
+  G[Save to localStorage as "history"]
+
+  A --> B --> C --> D --> E --> F --> G
+
+
+OPTIONAL - front end UI
+🌎 Show native region	Use Trefle’s distribution.native
+📅 Reminder UI	Create calendar-style reminder card
+🎯 Filter by plant type	Tag cards: indoor / edible / flowering
+📥 Export history	localStorage → download JSON file
+🌙 Dark mode	CSS + toggle button
+
