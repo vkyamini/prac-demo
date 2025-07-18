@@ -30,9 +30,12 @@ var nextbtn = document.createElement('button'); // next button
 var prevbtn = document.createElement('button'); // previous button
 var imageInput = document.getElementById('imageInput'); // stores the uploaded Img Url base64 which API can read
 var Idebutton =  document.createElement("button");
+var searchBtn = document.getElementById("searchBtn");
 
-
-
+Idebutton.classList.add('btn')
+nextbtn.classList.add('btn')
+prevbtn.classList.add('btn')
+searchBtn.classList.add('btn')
 //var preview =  document.createElement("button");
 var previewimg = document.createElement('img')
 var ImageHeading = document.createElement("h3")
@@ -176,6 +179,7 @@ prevbtn.addEventListener("click",() => {
  
 function fetchAllPlants() {
     result.innerHTML ="";
+    next.innerHTML = "";
 
     result.innerHTML = "🔍 Searching.....";
     
@@ -236,6 +240,10 @@ function updatePlantState (){
     .then(res => res.json())
     .then(detail =>{
         // update state
+
+        result.innerHTML ="";
+        next.innerHTML = "";
+    
         if (detail.common_names.length > 1) {
             PlantObj.name = detail.common_names.join(", ");
            }else{
@@ -309,6 +317,9 @@ function updatePlantState (){
 
 function renderPlantDetails() {
     result.innerHTML = " 🪴 Plants Fetched";
+    result.innerHTML ="";
+    next.innerHTML = "";
+
     
     if (PlantObj.name !== "") {
         var name = document.createElement('p');

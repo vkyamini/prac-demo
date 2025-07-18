@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Plant Info Search</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
   <style>
     body { font-family: sans-serif; padding: 20px; background: #f2fbe0; }
     input, button { padding: 10px; font-size: 16px; margin: 10px 0; }
@@ -17,7 +18,10 @@
     <div id="Input_Search">
       <input type="text" id="plantName" placeholder="Enter plant name..." />
       <button id="searchBtn">Search</button>
-      <input type="file" id="imageInput" accept="image/*"> 
+      <label class="upload-btn">
+        📤-upload
+        <input type="file" id="imageInput" accept="image/*" hidden />
+        </label>
     </div>
    <div id="result"></div>
    <div id="next"></div>
