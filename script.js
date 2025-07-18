@@ -75,6 +75,7 @@ imageInput.addEventListener("change",()=>{// uploads an image sent form the inpu
 
 
 Idebutton.addEventListener("click",()=>{
+    result.innerHTML = " 🔍 Fetching the Data"
     main();
 });
     
@@ -307,7 +308,7 @@ function updatePlantState (){
 }
 
 function renderPlantDetails() {
-    result.innerHTML = "";
+    result.innerHTML = " 🪴 Plants Fetched";
     
     if (PlantObj.name !== "") {
         var name = document.createElement('p');
