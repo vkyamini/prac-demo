@@ -39,8 +39,8 @@ searchBtn.classList.add('btn')
 //var preview =  document.createElement("button");
 var previewimg = document.createElement('img')
 var ImageHeading = document.createElement("h3")
-nextbtn.textContent = "Next Plant"
-prevbtn.textContent = "Previous Plant"
+nextbtn.textContent = "➡️ plant"
+prevbtn.textContent = "⬅️ plant"
 
 
   
@@ -143,10 +143,12 @@ function main(){
                     var plantDis =  document.createElement('p');
                     plantDis.innerHTML = plantList.plant_details.wiki_description.value;
                     var planturl =  document.createElement('a');
+                    planturl.classList.add('atag');
                     planturl.href = plantList.plant_details.url;
                     planturl.textContent = "Click ME - See More Details"; 
                     planturl.target = "_blank";   
                     var selectfromPlantList = document.createElement("button");
+                    electfromPlantList.classList.add('btn');
                     selectfromPlantList.textContent = plantList.plant_details.common_names[0];
                     query = plantList.plant_details.common_names[0];
                     next.append( plantName)
