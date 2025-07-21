@@ -428,9 +428,9 @@ function renderPlantDetails() {
         })
     }
     document.getElementById("next").append(nextbtn)
-    result.append(nextbtn);
     document.getElementById("next").append(prevbtn)
     result.append(prevbtn);
+    result.append(nextbtn);
    
     }
    
